@@ -5,7 +5,7 @@ const { Post } = require("../models");
 router.get("/posts", async (req, res) => {
   try {
     const posts = await Post.findAll();
-    res.status(200).json(posts);
+    res.json(posts);
   } catch (e) {
     console.log(e);
   }
